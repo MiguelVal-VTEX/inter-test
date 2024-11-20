@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Bulk Import Buyer Organizations Spreadsheet - My Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">B2B Suite</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">B2b organizations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Bulk Import Buyer Organizations Spreadsheet</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../settings/configure-tradename/" class="dropdown-item">How to configure tradeName to use in the organization search field</a>
+</li>
+            
+<li>
+    <a href="../../settings/how-to-configure-tradename-to-use-in-the-organization-search-field/" class="dropdown-item">How to configure tradeName to use in the organization search field</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../settings/configure-tradename/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#before-you-begin" class="nav-link">Before you begin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#step-by-step" class="nav-link">Step-by-step</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#file-structure-for-import" class="nav-link">File structure for import</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>This guide will walk you through the process of filling out the bulk import spreadsheet for use with the <a href="https://developers.vtex.com/docs/api-reference/buyer-organizations">Bulk Import API</a> to efficiently manage Buyer Organizations, Cost Centers, and Members through bulk import functionality.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>To use the bulk import of buyer organizations, you must first install and configure the <a href="https://developers.vtex.com/docs/apps/vtex.b2b-suite">B2B Suite</a> which includes the <a href="https://developers.vtex.com/docs/apps/vtex.b2b-organizations">B2B Organizations</a> app.</p>
+<h2 id="step-by-step">Step-by-step</h2>
+<ol>
+<li>Download the <a href="https://io.vtex.com.br/b2b-bulk-import/b2b-bulk-import-template.xlsx">template file</a>.</li>
+<li>Fill in the file with buyer organizations data following the specifications detailed in <a href="#file-structure-for-import">File structure for import</a>.</li>
+</ol>
+<blockquote>
+<p>ℹ Ensure your file is in <code>.xlsx</code> format and does not exceed 50MB.</p>
+</blockquote>
+<ol>
+<li>Once your file is ready, upload it by making a request to the <a href="https://developers.vtex.com/docs/api-reference/buyer-organizations#post-/api/b2b/import/buyer-orgs">Upload file</a> endpoint.</li>
+<li>Validate file content by making a request to the <a href="https://developers.vtex.com/docs/api-reference/buyer-organizations#post-/api/b2b/import/buyer-orgs/validate/-importId-">Validate file</a> endpoint.</li>
+<li>Once the file is successfully validated, start the bulk data import by making a request to the <a href="https://developers.vtex.com/docs/api-reference/buyer-organizations#post-/api/b2b/import/buyer-orgs/-importId-">Start import</a> endpoint.</li>
+</ol>
+<h2 id="file-structure-for-import">File structure for import</h2>
+<p>Before starting the upload and import process, it is essential to understand the required file structure. Ensure your import file adheres to the guidelines outlined below.</p>
+<h3 id="file-tabs">File tabs</h3>
+<p>The import file should be structured with up to three tabs, each serving a distinct purpose:</p>
+<ol>
+<li><a href="#columns-in-the-buyer-orgs-tab">Buyer Orgs tab</a>: Contains detailed information about buyer organizations.</li>
+<li><a href="#columns-in-the-cost-centers-tab">Cost Centers tab</a>: Dedicated to managing cost centers within organizations.</li>
+<li><a href="#columns-in-the-members-tab">Members tab</a>: Stores information regarding members associated with organizations and cost centers.</li>
+</ol>
+<h3 id="columns-in-the-buyer-orgs-tab">Columns in the Buyer Orgs tab</h3>
+<p>Each new organization should have one cost center in the Buyer Orgs tab. Additional columns for each custom field configured for the merchant can be added at the end of the Buyer Orgs tab.</p>
+<p>Check the default columns present in this tab in the table below. Mandatory information is marked with <code>*</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buyer Org ID*</td>
+<td>String</td>
+<td>Unique identifier for the buyer organization, for tracking and future updates.</td>
+</tr>
+<tr>
+<td>Buyer Org Name*</td>
+<td>String</td>
+<td>Official name of the buyer organization.</td>
+</tr>
+<tr>
+<td>Admin First Name*</td>
+<td>String</td>
+<td>First name of the administrator overseeing the buyer organization.</td>
+</tr>
+<tr>
+<td>Admin Last Name*</td>
+<td>String</td>
+<td>Last name of the administrator overseeing the buyer organization.</td>
+</tr>
+<tr>
+<td>Admin Email*</td>
+<td>String</td>
+<td>Administrator's email address serves as the organization's primary point of contact.</td>
+</tr>
+<tr>
+<td>Cost Center ID*</td>
+<td>String</td>
+<td>Unique identifier for the cost center essential for tracking and future updates.</td>
+</tr>
+<tr>
+<td>Cost Center Name*</td>
+<td>String</td>
+<td>Name assigned to the cost center.</td>
+</tr>
+<tr>
+<td>Address Type*</td>
+<td>String</td>
+<td>Classification of the address (e.g., residential, commercial).</td>
+</tr>
+<tr>
+<td>Postal Code*</td>
+<td>String</td>
+<td>Postal code corresponding to the address.</td>
+</tr>
+<tr>
+<td>Street*</td>
+<td>String</td>
+<td>Street name of the address.</td>
+</tr>
+<tr>
+<td>Number*</td>
+<td>String</td>
+<td>Numerical identifier for the location (house/building number).</td>
+</tr>
+<tr>
+<td>Complement*</td>
+<td>String</td>
+<td>Additional information regarding the address if any.</td>
+</tr>
+<tr>
+<td>Neighborhood*</td>
+<td>String</td>
+<td>Neighborhood of the address.</td>
+</tr>
+<tr>
+<td>City*</td>
+<td>String</td>
+<td>City where the address is located.</td>
+</tr>
+<tr>
+<td>State*</td>
+<td>String</td>
+<td>State where the address is situated.</td>
+</tr>
+<tr>
+<td>Country*</td>
+<td>String</td>
+<td>Country of the address.</td>
+</tr>
+<tr>
+<td>Receiver Name*</td>
+<td>String</td>
+<td>Name of the individual who is the point of contact at the address.</td>
+</tr>
+<tr>
+<td>Phone Number*</td>
+<td>String</td>
+<td>Contact number for the receiver.</td>
+</tr>
+<tr>
+<td>Business Document*</td>
+<td>String</td>
+<td>Document that contains essential business information (e.g., tax identification number).</td>
+</tr>
+<tr>
+<td>Collections</td>
+<td>String</td>
+<td>Collections allowed to the buyer organization, separated by comma.</td>
+</tr>
+<tr>
+<td>Price Tables</td>
+<td>String</td>
+<td>Price tables allowed to the buyer organization, separated by comma.</td>
+</tr>
+<tr>
+<td>Payment Terms</td>
+<td>String</td>
+<td>Payment terms allowed to the buyer organization, separated by comma.</td>
+</tr>
+<tr>
+<td>Trade Policies</td>
+<td>String</td>
+<td>Trade policies allowed to the buyer organization, separated by comma.</td>
+</tr>
+<tr>
+<td>Sellers</td>
+<td>String</td>
+<td>Sellers allowed to the buyer organization, separated by comma.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="columns-in-the-cost-centers-tab">Columns in the cost centers tab</h3>
+<p>This tab is required only for organizations with multiple cost centers. If the buyer organization has only one cost center, do not fill this tab.</p>
+<p>Check the default columns present in the Cost Centers tab in the table below. Mandatory information is marked with <code>*</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buyer Org ID*</td>
+<td>String</td>
+<td>Unique identifier for the buyer organization essential for tracking and future updates.</td>
+</tr>
+<tr>
+<td>Cost Center ID*</td>
+<td>String</td>
+<td>Unique identifier for the cost center essential for tracking and future updates.</td>
+</tr>
+<tr>
+<td>Cost Center Name*</td>
+<td>String</td>
+<td>Name assigned to the cost center.</td>
+</tr>
+<tr>
+<td>Address Type*</td>
+<td>String</td>
+<td>Classification of the address (e.g., residential, commercial).</td>
+</tr>
+<tr>
+<td>Postal Code*</td>
+<td>String</td>
+<td>Postal code corresponding to the address.</td>
+</tr>
+<tr>
+<td>Street*</td>
+<td>String</td>
+<td>Street name of the address.</td>
+</tr>
+<tr>
+<td>Number*</td>
+<td>String</td>
+<td>Numerical identifier for the location (house/building number).</td>
+</tr>
+<tr>
+<td>Complement*</td>
+<td>String</td>
+<td>Additional information regarding the address.</td>
+</tr>
+<tr>
+<td>Neighborhood*</td>
+<td>String</td>
+<td>Neighborhood of the address.</td>
+</tr>
+<tr>
+<td>City*</td>
+<td>String</td>
+<td>City where the address is located.</td>
+</tr>
+<tr>
+<td>State*</td>
+<td>String</td>
+<td>State where the address is situated.</td>
+</tr>
+<tr>
+<td>Country*</td>
+<td>String</td>
+<td>Country of the address.</td>
+</tr>
+<tr>
+<td>Receiver Name*</td>
+<td>String</td>
+<td>Name of the individual who is the point of contact at the address.</td>
+</tr>
+<tr>
+<td>Phone Number*</td>
+<td>String</td>
+<td>Contact number for the receiver.</td>
+</tr>
+<tr>
+<td>Business Document*</td>
+<td>String</td>
+<td>Document that contains essential business information (e.g. tax identification number).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="columns-in-the-members-tab">Columns in the Members tab</h3>
+<p>This tab is required only for organization with multiple members. If the buyer organization has only one member, do not fill this information.</p>
+<p>Check the default columns present in the Cost Centers tab in the table below. Mandatory information is marked with <code>*</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buyer Org ID*</td>
+<td>String</td>
+<td>Unique identifier linking the member to a specific buyer organization.</td>
+</tr>
+<tr>
+<td>Cost Center ID*</td>
+<td>String</td>
+<td>Identifier linking the member to a specific cost center within the organization.</td>
+</tr>
+<tr>
+<td>Name*</td>
+<td>String</td>
+<td>Member's full name used for identification and communication.</td>
+</tr>
+<tr>
+<td>Email*</td>
+<td>String</td>
+<td>Email address of the member serving as a primary point of contact for communication.</td>
+</tr>
+<tr>
+<td>Role Id*</td>
+<td>GUID</td>
+<td>Unique identifier denoting the member's role within the organization.</td>
+</tr>
+<tr>
+<td>Can Impersonate</td>
+<td>Boolean</td>
+<td>Indicates if the member can impersonate another user within the system.</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
